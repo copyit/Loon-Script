@@ -7,9 +7,7 @@
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png
 
 [Rewrite]
-^https:\/\/www.google.cn\/* https://www.google.com/search 302
-^https:\/\/www.google.co.jp\/* https://www.google.com/search 302
-^https:\/\/www.google.com.hk\/* https://www.google.com/search 302
+^https?:\/\/www\.google\.(?:cn|co\.jp|com\.hk)(?:\/(.*))?$ 302 https://www.google.com/$1
 
 [MITM]
 hostname = *.google.com.hk, *.google.cn, *.google.co.jp
